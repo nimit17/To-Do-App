@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nimitarora.todoapp.MainActivity"
+    tools:showIn="@layout/activity_main">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/relateLay">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:id="@+id/notification_background"
+        tools:ignore="InvalidId" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25th October 2017"
+        android:textSize="40dp"
+        android:id="@+id/DateToday"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFFF"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wed"
+        android:id="@+id/Day"
+        android:textSize="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="105dp"
+        android:textColor="#FFFF"/>
+
+</RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ListView"
+        android:layout_below="@id/relateLay"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Due tasks"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

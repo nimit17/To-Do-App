@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nimitarora.todoapp">
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TaskEditorActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="Add Task"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
+
+        <provider
+            android:name=".Data.TaskContentProvider"
+            android:authorities="com.example.android.todo"
+            android:exported="false" />
+
+        <activity android:name=".InfoActivity"
+            android:label="Task Details"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>
